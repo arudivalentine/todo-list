@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TODO-LIST</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Edu+SA+Beginner:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="/src/input.css"/>
+</head>
+
+<body>
+  <main class="app">
+    <section class="greeting">
+      <h2 class="title">
+        <!--a tailwind class with funny name-->
+        <span class="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-pink-500 relative inline-block">
+          <span class="relative text-white">What's up, </span>
+        </span>
+        <input type="text" id="name" placeholder="Name here">
+      </h2>
+    </section>
+
+    <section class="create-todo">
+      <h3>CREATE A TODO</h3>
+      <form id="new-todo-form">
+        <h4>What's on your todo list?</h4>
+        <input type="text" name="content" id="content" placeholder="e.g. make a video" />
+
+        <h4>Pick a category</h4>
+
+        <div class="options bg-purple-300">
+          <label>
+            <input type="radio" name="category" id="category-1" value="business" />
+            <span class="bubble business"></span>
+            <div>Business</div>
+          </label>
+
+          <label>
+            <input type="radio" name="category" id="category-2" value="Personal" />
+            <span class="bubble personal"></span>
+            <div>Personal</div>
+          </label>
+        </div>
+
+        <input type="submit" value="Add todo" class="transition duration-700 ease-in-out">
+      </form>
+    </section>
+
+    <section class="todos">
+      <h3>TODOS LIST</h3>
+      <div class="list" id="todo-list">
+        <div class="todo-item done">
+          <label>
+            <input type="checkbox" placeholder="checkedbox">
+            <span class="bubble business"></span>
+          </label>
+
+          <div class="todo-content">
+            <input type="text" value="make a video" placeholder="text" readonly />
+          </div>
+
+          <div class="action">
+            <button type="button" class="edit">Edit</button>
+            <button type="button" class="delete">Delete</button>
+          </div>
+        </div>
+
+        <div class="todo-item">
+          <label>
+            <input type="checkbox" placeholder="checkedbox">
+            <span class="bubble personal"></span>
+          </label>
+
+          <div class="todo-content">
+            <input type="text" value="make a coffee" placeholder="text" readonly />
+          </div>
+
+          <div class="action">
+            <button type="button" class="edit">Edit</button>
+            <button type="button" class="delete">Delete</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- background-toggle image -->
+    <!--
+    <button class="background-toggle" onclick="toggleBackground()">Toggle Background</button>-->
+  </main>
+  <script src="/src/sourcefile.js"></script>
+</body>
+</html>
